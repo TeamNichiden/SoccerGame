@@ -13,6 +13,7 @@
 		7F72E4752C4B8871000B7718 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F72E4742C4B8871000B7718 /* Preview Assets.xcassets */; };
 		7FA56FC62C4B8FF9005E510B /* StartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA56FC52C4B8FF9005E510B /* StartScreenView.swift */; };
 		7FA56FC82C4B966F005E510B /* GameScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA56FC72C4B966F005E510B /* GameScreenView.swift */; };
+		B62C1ED62C4B9A58000A2CA8 /* ShootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C1ED52C4B9A58000A2CA8 /* ShootModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		7F72E4742C4B8871000B7718 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7FA56FC52C4B8FF9005E510B /* StartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenView.swift; sourceTree = "<group>"; };
 		7FA56FC72C4B966F005E510B /* GameScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenView.swift; sourceTree = "<group>"; };
+		B62C1ED52C4B9A58000A2CA8 /* ShootModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		7F72E46C2C4B8867000B7718 /* SoccerGame */ = {
 			isa = PBXGroup;
 			children = (
+				B62C1ED42C4B9A44000A2CA8 /* Models */,
 				7F72E46D2C4B8867000B7718 /* SoccerGameApp.swift */,
 				7F72E46F2C4B8867000B7718 /* ContentView.swift */,
 				7FA56FC42C4B8FE2005E510B /* Views */,
@@ -79,6 +82,14 @@
 				7FA56FC72C4B966F005E510B /* GameScreenView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B62C1ED42C4B9A44000A2CA8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B62C1ED52C4B9A58000A2CA8 /* ShootModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62C1ED62C4B9A58000A2CA8 /* ShootModel.swift in Sources */,
 				7FA56FC82C4B966F005E510B /* GameScreenView.swift in Sources */,
 				7FA56FC62C4B8FF9005E510B /* StartScreenView.swift in Sources */,
 				7F72E4702C4B8867000B7718 /* ContentView.swift in Sources */,
