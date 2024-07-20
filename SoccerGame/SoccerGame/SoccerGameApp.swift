@@ -11,7 +11,7 @@ import SwiftUI
 struct SoccerGameApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartScreenView()
         }
     }
 }
