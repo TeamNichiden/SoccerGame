@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StartScreenView: View {
+    @State var addWidth : Int = 0
     @State var showPlayer:Bool = false
     @State var degree = 0.0
     var body: some View {
@@ -15,8 +16,17 @@ struct StartScreenView: View {
             ZStack{
                 VStack{
                     TitleView
+                    HStack{
+                        Spacer()
+                        Image(systemName: "gearshape.fill")
+                            .font(.largeTitle)
+                            .padding(.trailing,30)
+                    }
+                    
+                        
                     Spacer()
                     BallView
+                        .padding()
                     Spacer()
                     ButtonView
                         .padding()
@@ -67,19 +77,20 @@ extension StartScreenView{
             Image("Football")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width:90)
+                .frame(width: 60 + CGFloat(addWidth))
                 .rotationEffect(.degrees(degree))
                 .onAppear {
-                    withAnimation(.linear(duration: 0.3)
-                        .speed(0.1).repeatForever(autoreverses: false)) {
-                            degree = 360.0
+                    withAnimation(.bouncy(duration: 0.6)
+                        .speed(0.9).repeatForever(autoreverses: true)) {
+                            degree = 720
+                            addWidth = 30
                         }
                 }
             
             Image("Rings")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 350)
+                .frame(width: 340 + CGFloat(addWidth))
                 .rotationEffect(.degrees(degree * -1))
                 .onTapGesture {
                     showPlayer = true
