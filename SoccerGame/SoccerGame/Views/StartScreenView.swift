@@ -8,56 +8,32 @@
 import SwiftUI
 
 struct StartScreenView: View {
-    
+    @State var showPlayer:Bool = false
     @State var degree = 0.0
     var body: some View {
         NavigationView{
             ZStack{
-                Color.gray
-                    .ignoresSafeArea()
-                Image("bcpic")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .rotationEffect(.degrees(90.0))
-                    .scaleEffect(1.3)
-                    .opacity(0.1)
-                
-                BallView
-                
-            VStack{
-                
-                Text("Soccer")
-                    .font(.system(size: 50))
-                    .bold()
-                    .frame(maxWidth: .infinity)
-                    .frame(height:55)
-                    .foregroundColor(.white)
-                    .background(.black)
-                    .cornerRadius(10)
-                    .padding()
-                Spacer()
-
-                ButtonView
-                    .padding()
-                
+                VStack{
+                    TitleView
+                    Spacer()
+                    BallView
+                    Spacer()
+                    ButtonView
+                        .padding()
+                    
+                } 
             }
-            
-                
-            
-            
-            
-        }
         }
         
     }
-   
+    
 }
 
 
 extension StartScreenView{
     private var ButtonView:some View{
         HStack{
-            Image("shoot")//キャラ選べるようにする
+            Image("Shoot")//キャラ選べるようにする
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width:80)
@@ -73,6 +49,7 @@ extension StartScreenView{
                     .padding()
                 
             }
+            
             Spacer()
             Image("Highscore")
                 .resizable()
@@ -86,17 +63,40 @@ extension StartScreenView{
     }
     
     private var BallView:some View{
-        Image("Football")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width:90)
-            .rotationEffect(.degrees(degree))
-            .onAppear {
-                withAnimation(.linear(duration: 0.3)
-                    .speed(0.1).repeatForever(autoreverses: false)) {
-                        degree = 360.0
-                    }
-            }
+        ZStack{
+            Image("Football")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width:90)
+                .rotationEffect(.degrees(degree))
+                .onAppear {
+                    withAnimation(.linear(duration: 0.3)
+                        .speed(0.1).repeatForever(autoreverses: false)) {
+                            degree = 360.0
+                        }
+                }
+            
+            Image("Rings")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 350)
+                .rotationEffect(.degrees(degree * -1))
+                .onTapGesture {
+                    showPlayer = true
+                }
+        }
+        
+    }
+    private var TitleView:some View{
+        Text("PKゲーム")
+            .font(.system(size: 50))
+            .bold()
+            .frame(maxWidth: .infinity)
+            .frame(height:55)
+            .foregroundColor(.white)
+            .background(.black)
+            .cornerRadius(10)
+            .padding()
     }
 }
 
