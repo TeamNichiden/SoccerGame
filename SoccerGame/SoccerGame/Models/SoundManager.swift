@@ -12,7 +12,11 @@ import AVFoundation
 class SoundManager: ObservableObject{
     
     private var soundPlayer :AVAudioPlayer?
-    @Published var volume : Float = 1.0
+    @Published var volume : Float = 1.0{
+        didSet{
+            updateVolume()
+        }
+    }
     
     
     func playSound(FileName:String,FileType:String,loop:Bool){
@@ -34,6 +38,8 @@ class SoundManager: ObservableObject{
     func stopSound(){
         soundPlayer?.stop()
     }
-    
+    func updateVolume(){
+        soundPlayer?.volume = volume
+    }
     
 }

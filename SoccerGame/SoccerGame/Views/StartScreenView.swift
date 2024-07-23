@@ -36,6 +36,9 @@ struct StartScreenView: View {
                 }
             }
         }
+        .onAppear {
+            soundManager.playSound(FileName: "bgSound", FileType: "mp3", loop: true)
+        }
         
     }
     
