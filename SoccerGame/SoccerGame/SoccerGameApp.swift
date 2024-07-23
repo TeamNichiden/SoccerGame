@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct SoccerGameApp: App {
+    @StateObject var soundManager = SoundManager()
     var body: some Scene {
         WindowGroup {
-            GameScreenView()
+            StartScreenView()
+                .environmentObject(soundManager)
         }
     }
 }

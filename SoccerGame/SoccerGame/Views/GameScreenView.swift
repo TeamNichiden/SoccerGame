@@ -20,6 +20,7 @@ struct GameScreenView: View {
     @State var greenposition: Bool = true
     
     var body: some View {
+
         VStack {
             //Goal
             ZStack {
@@ -149,6 +150,7 @@ struct GameScreenView: View {
             blueposition = false
             greenposition = false
         }
+
     }
 }
 
