@@ -9,10 +9,13 @@ import Foundation
 import UIKit
 import AVFoundation
 
-class SoundManager{
-    private var soundPlayer : AVAudioPlayer?
+class SoundManager: ObservableObject{
     
-    func playSound(FileName:String,FileType:String,loop:Bool,volume:Float){
+    private var soundPlayer :AVAudioPlayer?
+    @Published var volume : Float = 1.0
+    
+    
+    func playSound(FileName:String,FileType:String,loop:Bool){
         guard let url = Bundle.main.url(forResource: FileName, withExtension: FileType) else{
         print("File not found")
             return

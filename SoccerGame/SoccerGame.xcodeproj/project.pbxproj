@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F4286A62C4E33C3009B05E5 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4286A52C4E33C3009B05E5 /* SoundManager.swift */; };
+		7F4286A82C4E3D30009B05E5 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4286A72C4E3D30009B05E5 /* SettingView.swift */; };
 		7F72E46E2C4B8867000B7718 /* SoccerGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F72E46D2C4B8867000B7718 /* SoccerGameApp.swift */; };
 		7F72E4702C4B8867000B7718 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F72E46F2C4B8867000B7718 /* ContentView.swift */; };
 		7F72E4722C4B8871000B7718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F72E4712C4B8871000B7718 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		7F4286A52C4E33C3009B05E5 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		7F4286A72C4E3D30009B05E5 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		7F72E46A2C4B8867000B7718 /* SoccerGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F72E46D2C4B8867000B7718 /* SoccerGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccerGameApp.swift; sourceTree = "<group>"; };
 		7F72E46F2C4B8867000B7718 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				7FA56FC52C4B8FF9005E510B /* StartScreenView.swift */,
+				7F4286A72C4E3D30009B05E5 /* SettingView.swift */,
 				7FA56FC72C4B966F005E510B /* GameScreenView.swift */,
 			);
 			path = Views;
@@ -168,6 +171,7 @@
 				B62C1ED62C4B9A58000A2CA8 /* ShootModel.swift in Sources */,
 				7FA56FC82C4B966F005E510B /* GameScreenView.swift in Sources */,
 				7FA56FC62C4B8FF9005E510B /* StartScreenView.swift in Sources */,
+				7F4286A82C4E3D30009B05E5 /* SettingView.swift in Sources */,
 				7F72E4702C4B8867000B7718 /* ContentView.swift in Sources */,
 				7F72E46E2C4B8867000B7718 /* SoccerGameApp.swift in Sources */,
 				7F4286A62C4E33C3009B05E5 /* SoundManager.swift in Sources */,
