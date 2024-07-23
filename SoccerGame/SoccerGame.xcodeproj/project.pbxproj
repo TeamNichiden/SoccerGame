@@ -70,6 +70,7 @@
 				7F72E46F2C4B8867000B7718 /* ContentView.swift */,
 				7FA56FC42C4B8FE2005E510B /* Views */,
 				7F72E4712C4B8871000B7718 /* Assets.xcassets */,
+				7FE2A0E62C4F79320000CA5C /* Sounds */,
 				7F72E4732C4B8871000B7718 /* Preview Content */,
 			);
 			path = SoccerGame;
